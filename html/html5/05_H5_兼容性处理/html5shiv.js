@@ -1,4 +1,4 @@
-/*! HTML5 Shiv pre3.5 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+/*! html5 Shiv pre3.5 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
   Uncompressed source: https://github.com/aFarkas/html5shiv  */
 (function (a, b) {
     function h(a, b) {
