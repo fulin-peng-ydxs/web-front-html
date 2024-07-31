@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design with Media Queries</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1 1 300px;
+            margin: 10px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* 小于768px时，每个box占满一行 */
+        @media screen and (max-width: 768px) {
+            .box {
+                flex: 1 1 100%;
+            }
+        }
+
+        /* 大于等于768px且小于1024px时，每行显示两个box */
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .box {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        /* 大于1024px时，每行显示三个box */
+        @media screen and (min-width: 1024px) {
+            .box {
+                flex: 1 1 calc(33.33% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Responsive Design with Media Queries</h1>
+</header>
+<div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+    <div class="box">Box 5</div>
+    <div class="box">Box 6</div>
+</div>
+</body>
+</html>
+<!--
+代码解释
+	•	基础布局：
+	•	使用 flex 布局，默认每个 .box 最小宽度为 300px。
+	•	媒体查询：
+	•	当屏幕宽度小于 768px 时，每个 .box 占满一行。
+	•	当屏幕宽度在 768px 到 1024px 之间时，每行显示两个 .box。
+	•	当屏幕宽度大于 1024px 时，每行显示三个 .box。
+-->
