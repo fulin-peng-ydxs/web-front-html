@@ -48,8 +48,12 @@
 			//console.log(mc2.a);
 			
 			mc.sayHello();
-			
-			
+
+			console.log(mc.__proto__.constructor==mc.constructor);
+			console.log(Object.prototype == mc.__proto__.__proto__);
+
+			console.log(Object.prototype);
+
 		</script>
 	</head>
 	<body>
